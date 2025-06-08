@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalcTot</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <h2>GST & SVC Calculator</h2>
+
+    <label for="amount">Amount (SGD):</label>
+    <input type="number" id="amount" min="0" step="0.01" placeholder="Enter amount">
+
+    <label for="gst">GST:</label>
+    <div class="checkbox-row">
+        <input type="checkbox" id="applyGST" checked>
+        <select id="gst">
+            <!-- <option value="7">7%</option> -->
+            <option value="8">8%</option>
+            <option value="9" selected>9%</option>
+            <option value="10">10%</option>
+        </select>
+    </div>
+
+    <label for="service">Service Charge:</label>
+    <div class="checkbox-row">
+        <input type="checkbox" id="applySVC" checked>
+        <select id="service">
+            <option value="8">8%</option>
+            <option value="9">9%</option>
+            <option value="10" selected>10%</option>
+            <option value="11">11%</option>
+        </select>
+    </div>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div class="formula" id="formula"></div>
+    <div class="result" id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
